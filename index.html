@@ -8,82 +8,105 @@
 </head>
 <body>
     <header>
-        <h1>Student Application Management System</h1>
-        <h3>Register and manage student applications</h3>
+        <div class="header-content">
+            <div>
+                <h1>Student Application Management System</h1>
+                <h3>Register and manage student applications</h3>
+            </div>
+        </div>    
     </header>
 
-    <form action="">
-        <div>
-            <p>Name: </p>
-            <input type="text" required placeholder="Enter Name Here...">
-        </div>
+    <main class="container">
+        <section class = "form-group">
+            <form id="stuForm"></form>
+                <div class="form-grid">
+                    <div class="form-group"></div>
+                        <label for="studentName">Student Name: </label>
+                        <input type="text" id="studentName" placeholder="Enter name...">
+                    </div>
 
-        <div>
-            <p>Email: </p>
-            <input type="email" required placeholder="Enter Email Here...">
-        </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" placeholder="Enter email...">
+                    </div>
 
-        <div>
-            <p>Date of Birth: </p>
-            <input type="date" required>
-        </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number: </label>
+                        <input type="text" id="phone" placeholder="Enter phone number...">
+                    </div>
 
-        <div>
-            <p>Gender: </p>
-            <p>Male</p>
-            <input type="radio" required placeholder="Name">
-            <p>Female</p>
-            <input type="radio" required placeholder="Name">
-            <p>Other </p>
-            <input type="radio" required placeholder="Name">
-        </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth: </label>
+                        <input type="date" id="dob">
+                    </div>
 
-        <div>
-            <p>Select Course: </p>
-            <select name="Course" id="">
-                <option selected id="">Courses</option>
-                <option  id="">Web Development</option>
-                <option  id="">UI/UX</option>
-                <option  id="">Python</option>
-                <option  id="">Data Analytics</option>
-                <option  id="">MERN Stack</option>
-                <option  id="">Cloud Computing</option>
-            </select>
-        </div>
+                    <div class="form-group">
+                        <label>Gender: </label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                    </div>
 
-        <div>
-            <p>Skills: </p>
-            <p>HTML</p>
-            <input type="checkbox" id="">
-            <p>CSS</p>
-            <input type="checkbox" id="">
-            <p>JavaScript</p>
-            <input type="checkbox" id="">
-            <p>GIT</p>
-            <input type="checkbox" id="">
-            <p>React</p>
-            <input type="checkbox" id="">
-            <p>Node.js</p>
-            <input type="checkbox" id="">
-        </div>
+                    <div class="form-group">
+                        <label for="course">Course: </label>
+                        <select id="course">
+                            <option value="">Select Course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="MERN Stack">MERN Stack</option>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                        </select>
+                    </div>
 
-        <div>
-            <p>Text Area: </p>
-            <input type="text" placeholder="Text Area" max="200">
-        </div>
+                    <div class="form-group">
+                        <label>Skills: </label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                            <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                            <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                            <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                            <label><input type="checkbox" name="skills" value="React"> React</label>
+                            <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+                        </div>
+                    </div>
 
-        <div>
-            <p>Profile Photo: </p>
-            <input type="file">
-        </div>
+                    <div class="form-group">
+                        <label for="about">About Student: </label>
+                        <textarea id="about" rows="3" placeholder="About yourself"></textarea>
+                    </div>
 
-        <div>
-            <Button>Register Student</Button>
-            <Button>Reset Form</Button>
-        </div>
+                    <div>
+                        <label for="photo">Profile Photo: </label>
+                        <input type="file" id="photo">
+                    </div>
 
+                    <div class="form-group">
+                        <button type="submit" id="submitBtn" class="btn primary-btn">Register Student</button>
+                        <button type="button" id="resetBtn" class="btn secondary-btn">Reset Form</button>
+                    </div>
 
-    </form>
+                </div>
+            </form>
+        </section>
+
+        <section class="card stats-section">
+            <h2>Student Statistics</h2>
+            <h3 id="totalStudents">Total Students: 0</h3>
+            <div class="stats-grid" id="courseStats">
+                <p>Web Development: <span>0</span></p>
+                <p>UI/UX: <span>0</span></p>
+                <p>Python: <span>0</span></p>
+                <p>Data Analytics: <span>0</span></p>
+                <p>MERN Stack: <span>0</span></p>
+                <p>Cloud Computing: <span>0</span></p>
+            </div>
+        </section>
+        
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
