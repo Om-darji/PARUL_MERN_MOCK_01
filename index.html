@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <h3>Register and manage student applications</h3>
+    </header>
+
+    <form action="">
+        <div>
+            <p>Name: </p>
+            <input type="text" required placeholder="Enter Name Here...">
+        </div>
+
+        <div>
+            <p>Email: </p>
+            <input type="email" required placeholder="Enter Email Here...">
+        </div>
+
+        <div>
+            <p>Date of Birth: </p>
+            <input type="date" required>
+        </div>
+
+        <div>
+            <p>Gender: </p>
+            <p>Male</p>
+            <input type="radio" required placeholder="Name">
+            <p>Female</p>
+            <input type="radio" required placeholder="Name">
+            <p>Other </p>
+            <input type="radio" required placeholder="Name">
+        </div>
+
+        <div>
+            <p>Select Course: </p>
+            <select name="Course" id="">
+                <option selected id="">Courses</option>
+                <option  id="">Web Development</option>
+                <option  id="">UI/UX</option>
+                <option  id="">Python</option>
+                <option  id="">Data Analytics</option>
+                <option  id="">MERN Stack</option>
+                <option  id="">Cloud Computing</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Skills: </p>
+            <p>HTML</p>
+            <input type="checkbox" id="">
+            <p>CSS</p>
+            <input type="checkbox" id="">
+            <p>JavaScript</p>
+            <input type="checkbox" id="">
+            <p>GIT</p>
+            <input type="checkbox" id="">
+            <p>React</p>
+            <input type="checkbox" id="">
+            <p>Node.js</p>
+            <input type="checkbox" id="">
+        </div>
+
+        <div>
+            <p>Text Area: </p>
+            <input type="text" placeholder="Text Area" max="200">
+        </div>
+
+        <div>
+            <p>Profile Photo: </p>
+            <input type="file">
+        </div>
+
+        <div>
+            <Button>Register Student</Button>
+            <Button>Reset Form</Button>
+        </div>
+
+
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
